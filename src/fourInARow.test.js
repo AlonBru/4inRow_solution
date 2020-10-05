@@ -26,8 +26,10 @@ describe('App Test', () => {
     test('Correct sign after click', async () => {
         await page.waitForSelector('#column0', {visible: true});
         await (await page.$('#column0')).click()
+        console.log(1)
         await page.waitForSelector('#column0 #square0 .player1', {visible: true});
         await (await page.$('#column0')).click()
+        console.log(2)
         await page.waitForSelector('#column0 #square1 .player2', {visible: true});
     });
 
